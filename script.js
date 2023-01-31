@@ -25,7 +25,7 @@ document.querySelector("#submitBtn").addEventListener("click", function() {
   updateDisplay();
 });
 
-export function updateDisplay() {
+function updateDisplay() {
   let wordDisplay = "";
   for (let i = 0; i < word.length; i++) {
     if (lettersGuessed.includes(word[i])) {
@@ -47,3 +47,4 @@ export function updateDisplay() {
     document.querySelector("#submitBtn").disabled = true;
   }
 }
+
