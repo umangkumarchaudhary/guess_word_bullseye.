@@ -1,0 +1,27 @@
+.game {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .word-display {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .guess-form {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  
+  .guess-input {
+    width: 50px;
+    font-size: 36px;
+    text-align: center;
+  }
+  
+  .message {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
