@@ -25,6 +25,20 @@ document.querySelector("#submitBtn").addEventListener("click", function() {
   updateDisplay();
 });
 
+document.querySelector("#resetBtn").addEventListener("click", function() {
+  word = wordList[Math.floor(Math.random() * wordList.length)];
+  hint = hints[wordList.indexOf(word)];
+  remainingGuesses = 8;
+  lettersGuessed = [];
+  document.querySelector("#remainingGuesses").innerHTML = `Remaining Guesses: ${remainingGuesses}`;
+  document.querySelector("#message").innerHTML = "";
+  document.querySelector("#letterInput").disabled = false;
+  document.querySelector("#submitBtn").disabled = false;
+  document.querySelector("#letterInput").value = "";
+  document.querySelector("#hint").innerHTML = `Hint: ${hint}`;
+  updateDisplay();
+});
+
 function updateDisplay() {
   let wordDisplay = "";
   for (let i = 0; i < word.length; i++) {
@@ -43,8 +57,6 @@ function updateDisplay() {
   }
   if (remainingGuesses === 0) {
     document.querySelector("#message").innerHTML = `You lose! The word was ${word}.`;
-    document.querySelector("#letterInput").disabled = true;
-    document.querySelector("#submitBtn").disabled = true;
-  }
+    document.querySelector("#letterInput")
+  };
 }
-
